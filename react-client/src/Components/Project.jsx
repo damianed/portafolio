@@ -10,9 +10,16 @@ class Project extends Component{
     };
   }
   render(){
+    let style = {
+      backgroundImage : "url('./weatherapp.png')",
+      backgroundPosition: "center",
+      backgroundrRepeat: "no-repeat",
+      backgroundSize: "cover",
+    }
     return (
-      <div className="project">
-        Project
+      <div className="project col-lg-6 col-md-12" style={style}>
+        <button>Gihub</button>
+        <button>Live</button>
       </div>
     )
   }
