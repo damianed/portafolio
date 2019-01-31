@@ -1,3 +1,8 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
 header{
   display: block;
   background-color: gray;
@@ -26,9 +31,27 @@ footer{
 .project{
   height: 400px;
   background-color: gray;
-  overflow:hidden
+  text-align: center;
+  /* overflow:hidden; */
+}
+.project-background{
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
   filter: blur(1px);
-  -webkit-filter: blur(8px);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.project > div > span{
+  -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(13px);
+    filter: blur(0px);
 }
 .title{
   height: 400px;

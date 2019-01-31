@@ -17,9 +17,15 @@ class Project extends Component{
       backgroundSize: "cover",
     }
     return (
-      <div className="project col-lg-6 col-md-12" style={style}>
-        <button>Gihub</button>
-        <button>Live</button>
+      <div class="project col-lg-6 col-md-12 justify-content-center" >
+        <div class="project-background" style={style}>
+        </div>
+        <div className="row align-items-center justify-content-center h-100">
+          <span>
+            <button>Gihub</button>
+            <button>Live</button>
+          </span>
+        </div>
       </div>
     )
   }

@@ -11,10 +11,12 @@ class Projects extends Component{
 
   render(){
     return (
-      <div className="projects-container row" id="projects">
-        <h1>Projects</h1>
-        <Project />
-        <Project />
+      <div className="container-fluid">
+        <div className="projects-container row" id="projects">
+          <h1>Projects</h1>
+          <Project />
+          <Project />
+        </div>
       </div>
     )
   }
