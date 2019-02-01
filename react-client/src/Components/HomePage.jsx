@@ -6,7 +6,7 @@ class HomePage extends Component{
       <div className="title">
         <span><p>Damian Escobedo</p>
               <p>Software Developer</p>
-              <button>Projects</button>
+              <button className="btn btn-outline-light btn-lg">Projects</button>
         </span>
       </div>
     )

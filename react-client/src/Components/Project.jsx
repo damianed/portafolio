@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ProjectDescription from "./ProjectDescription";
 
 class Project extends Component{
   constructor(props){
@@ -6,7 +7,8 @@ class Project extends Component{
     this.state = {
       image: props.image,
       repository: props.repository,
-      site: props.site
+      site: props.site,
+      imgLeft: props.imgLeft
     };
   }
   render(){
@@ -15,19 +17,36 @@ class Project extends Component{
       backgroundPosition: "center",
       backgroundrRepeat: "no-repeat",
       backgroundSize: "cover",
+      boxShadow: "inset 0 1px 1px 1px rgba(0, 0, 0, 0.075)",
     }
     return (
-      <div class="project col-lg-6 col-md-12 justify-content-center" >
-        <div class="project-background" style={style}>
-        </div>
-        <div className="row align-items-center justify-content-center h-100">
-          <span>
-            <button>Gihub</button>
-            <button>Live</button>
-          </span>
-        </div>
-      </div>
+      <CreateProject position={this.state.imgLeft}/>
     )
+    function CreateProject(props){
+      const position = props.position;
+      if(position){
+        return(
+          <div class="project row col-12">
+              <SideImage />
+              <ProjectDescription />
+          </div>
+        )
+      }else{
+        return(
+          <div class="project row col-12">
+            <ProjectDescription />
+            <SideImage />
+          </div>
+        )
+      }
+    }
+
+    function SideImage(props){
+      return(
+        <div class="col-lg-4 col-md-6 col-sm-12 project-background" style={style}>
+        </div>
+      )
+    }
   }
 }
 
