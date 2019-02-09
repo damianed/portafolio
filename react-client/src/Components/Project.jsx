@@ -23,27 +23,19 @@ class Project extends Component{
       <CreateProject position={this.state.imgLeft}/>
     )
     function CreateProject(props){
-      const position = props.position;
-      if(position){
+      const order = props.position ? "order-md-first" : "order-md-last";
         return(
           <div class="project row col-12">
-              <SideImage />
+              <SideImage order={order}/>
               <ProjectDescription />
           </div>
         )
-      }else{
-        return(
-          <div class="project row col-12">
-            <ProjectDescription />
-            <SideImage />
-          </div>
-        )
-      }
     }
 
     function SideImage(props){
+      const order = props.order;
       return(
-        <div class="col-lg-4 col-md-6 col-sm-12 project-background" style={style}>
+        <div class={"col-lg-4 col-md-6 col-sm-12 " + order + " row project-background"} style={style}>
         </div>
       )
     }

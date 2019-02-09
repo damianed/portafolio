@@ -11,7 +11,7 @@ class Projects extends Component{
   render(){
     return (
       <div className="container-fluid" style={{paddingLeft:0, paddingRight:0}}>
-        <div className="projects-container row" id="projects">
+        <div className="projects-container row justify-content-center" id="projects">
           <h1>Projects</h1>
           <Project imgLeft={true}/>
           <Project imgLeft={false}/>
