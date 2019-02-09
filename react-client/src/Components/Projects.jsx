@@ -13,8 +13,8 @@ class Projects extends Component{
       <div className="container-fluid" style={{paddingLeft:0, paddingRight:0}}>
         <div className="projects-container row justify-content-center" id="projects">
           <h1>Projects</h1>
-          <Project imgLeft={true}/>
-          <Project imgLeft={false}/>
+          <Project repository={"https://github.com/damianed/django_weatherapp/"} site={"https://sleepy-cliffs-65876.herokuapp.com"} imgLeft={true}/>
+          <Project repository={"https://github.com/damianed/django_weatherapp/"} site={"https://sleepy-cliffs-65876.herokuapp.com"} imgLeft={false}/>
         </div>
       </div>
     )

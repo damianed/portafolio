@@ -20,14 +20,14 @@ class Project extends Component{
       boxShadow: "inset 0 1px 1px 1px rgba(0, 0, 0, 0.075)",
     }
     return (
-      <CreateProject position={this.state.imgLeft}/>
+      <CreateProject site={this.state.site} repo={this.state.repository} position={this.state.imgLeft}/>
     )
     function CreateProject(props){
       const order = props.position ? "order-md-first" : "order-md-last";
         return(
           <div class="project row col-12">
               <SideImage order={order}/>
-              <ProjectDescription />
+              <ProjectDescription site={props.site} repository={props.repo}/>
           </div>
         )
     }
