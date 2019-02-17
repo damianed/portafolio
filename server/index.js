@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(`${__dirname}/../react-client/dist/index.html`));
 });
 
-app.get("/getData", (req, res) => {
+app.get("/api/getData", (req, res) => {
   Projects.find((err, data) => {
     if (err) return res.json({ success: false, error: err });
     return res.json({ success: true, data: data });
