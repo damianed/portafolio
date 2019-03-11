@@ -22,14 +22,14 @@ class Project extends Component{
       boxShadow: "inset 0 1px 1px 1px rgba(0, 0, 0, 0.075)",
     }
     return (
-      <CreateProject site={this.state.site} repo={this.state.repository} position={this.state.imgLeft} description={this.state.description}/>
+      <CreateProject name={this.state.name} site={this.state.site} repo={this.state.repository} position={this.state.imgLeft} description={this.state.description}/>
     )
     function CreateProject(props){
       const order = props.position ? "order-md-first" : "order-md-last";
         return(
           <div class="project row col-12">
               <SideImage order={order}/>
-              <ProjectDescription site={props.site} repository={props.repo} description={props.description}/>
+              <ProjectDescription site={props.site} name={props.name} repository={props.repo} description={props.description}/>
           </div>
         )
     }
