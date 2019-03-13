@@ -13,7 +13,7 @@ class ProjectDescription extends Component{
   render(){
     let site;
     if(this.state.site){
-      site =  <a target="_blank" href={this.state.site} class="btn" title="See Live Site"><i class="fas fa-link fa-lg"></i></a>
+      site = <a target="_blank" href={this.state.site} class="btn" title="See Live Site"><i class="fas fa-link fa-lg"></i></a>
     }
     return(
       <div className="row col-lg-8 col-md-6 col-sm-12 align-items-center justify-content-center">
